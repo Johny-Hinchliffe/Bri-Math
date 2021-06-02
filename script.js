@@ -1,12 +1,3 @@
-//Search Stuff
-const search = document.querySelector('.search')
-const btn = document.querySelector('.btn')
-const input = document.querySelector('.input')
-
-btn.addEventListener('click', () => {
-	search.classList.toggle('active')
-	input.focus()
-})
 
 // Adding Variables
 
@@ -30,12 +21,12 @@ random.addEventListener('click', function () {
 	answerBox.value = ''
 	if (num1 > num2) {
 		answer = num1 - num2
-		equation.textContent = `${num1} - ${num2} = X` 
+		equation.textContent = `${num1} - ${num2} =  ` 
         
         // maths.textContent += `${num1} - ${num2} = X`
 	} else {
 		answer = num2 - num1
-		equation.textContent = `${num2} - ${num1} = X`
+		equation.textContent = `${num2} - ${num1} = `
         // maths.textContent += `${num1} - ${num2} = X`
 	}
 })
@@ -56,3 +47,19 @@ answerBox.addEventListener('keyup', function (event) {
 // } else {
 //     pastMath.textContent += `${num2} - ${num1} = ${answer}`
 // }
+
+
+
+//////////////////// NavBar
+
+const toggler = document.querySelector('.menu__toggler');
+const menu    = document.querySelector('.menu');
+
+/*
+ * Toggles on and off the 'active' class on the menu
+ * and the toggler button.
+ */
+toggler.addEventListener('click', () => {
+  toggler.classList.toggle('active');
+  menu.classList.toggle('active');
+})
